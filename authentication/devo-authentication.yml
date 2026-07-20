@@ -1,0 +1,52 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.devo.com/space/latest/95128251/API+reference (Authorizing REST API
+  requests) and the first-party python-sdk client
+  (https://github.com/DevoInc/python-sdk/blob/master/devo/api/client.py)
+docs: https://docs.devo.com/confluence/ndt/api-reference/rest-api/authorizing-rest-api-requests
+summary:
+  types: [apiKey-hmac, http-bearer]
+  api_key_in: [header]
+  notes: >-
+    Devo REST API requests authenticate with domain-scoped credentials created in
+    Administration -> Credentials -> Access Keys. Two schemes are supported: (1)
+    an API key + API secret used to HMAC-SHA256-sign each request, or (2) a
+    standalone Bearer token. Credentials are domain- and region-scoped.
+schemes:
+- name: HMAC signed request
+  type: apiKey
+  in: header
+  description: >-
+    Sign each request with the domain API key and secret. The signature is
+    HMAC-SHA256 over the request body/data plus the API key and timestamp, sent
+    hex-encoded.
+  headers:
+  - name: x-logtrust-apikey
+    value: "<domain API key>"
+  - name: x-logtrust-timestamp
+    value: "<request timestamp in ms>"
+  - name: x-logtrust-sign
+    value: "<HMAC-SHA256(apikey + data + timestamp, apiSecret) hex>"
+  sources:
+  - https://github.com/DevoInc/python-sdk/blob/master/devo/api/client.py
+- name: Standalone Bearer token
+  type: http
+  scheme: bearer
+  description: >-
+    Authenticate with a standalone access token generated in the Devo web UI.
+    Sent as an Authorization Bearer header alongside a request timestamp.
+  headers:
+  - name: Authorization
+    value: "Bearer <standalone token>"
+  - name: x-logtrust-timestamp
+    value: "<request timestamp in ms>"
+  sources:
+  - https://github.com/DevoInc/python-sdk/blob/master/devo/api/client.py
+data_ingestion:
+  note: >-
+    Event ingestion (sending data to Devo) is authenticated separately using
+    mutual-TLS X.509 domain certificates (key + cert + CA chain) over the secure
+    sending endpoints, distinct from the REST API key/token schemes above.
+  sources:
+  - https://docs.devo.com/space/latest/94658823/Sending+data+to+the+HTTP+API+endpoint
