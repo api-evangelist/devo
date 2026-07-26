@@ -1,0 +1,30 @@
+generated: '2026-07-18'
+method: searched
+source: live probes of /.well-known/ paths on Devo hosts (2026-07-18)
+note: >-
+  No /.well-known/ discovery documents are published on the probed hosts.
+  www.devo.com returns 404 for all probed paths; docs.devo.com is fronted by a
+  WAF returning 403; the regional API hosts (apiv2-us.devo.com) return 404.
+  Absence recorded as valid, expected data.
+hosts:
+- host: https://www.devo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://docs.devo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 403}
+  - {path: /.well-known/openid-configuration, status: 403}
+  - {path: /.well-known/oauth-authorization-server, status: 403}
+  - {path: /.well-known/api-catalog, status: 403}
+  - {path: /.well-known/ai-plugin.json, status: 403}
+- host: https://apiv2-us.devo.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}

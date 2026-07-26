@@ -1,28 +1,153 @@
 aid: devo
 name: Devo
-description: 'Devo is a company surfaced as a portfolio company of bessemer-venture-partners, insight-partners
-  and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  Devo is a cloud-native security data platform delivering unified SIEM, security
+  analytics, and threat detection at petabyte scale, powered by its HyperStream
+  data engine for real-time ingestion and analytics. Devo exposes a public REST
+  API surface for programmatic access to the platform: a Query API for running
+  synchronous and asynchronous (job) queries against ingested data, an Alerts API
+  for managing alert definitions and alert instances, plus Activeboards, Lookups,
+  Provisioning, and Relay APIs. Authentication uses domain API key and secret
+  credentials (HMAC-SHA256 request signing via x-logtrust-apikey / -timestamp /
+  -sign headers) or standalone Bearer tokens. First-party SDKs are published for
+  Python, Node.js, and the browser, alongside a Grafana datasource, a Fluentd
+  plugin, an ML Model Manager client, and a JavaScript application-builder
+  framework. Regional API endpoints are provided for the US (apiv2-us.devo.com)
+  and EU (apiv2-eu.devo.com).
 url: https://raw.githubusercontent.com/api-evangelist/devo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bessemer-venture-partners
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-pipeline
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.devo.com/wp-content/themes/devo/assets/images/devo-logo.svg
 tags:
 - Company
 - Cybersecurity
-apis: []
+- SIEM
+- Security
+- Security Data Platform
+- Threat Detection
+- Log Management
+- Analytics
+- Observability
+- Query API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Devo Query API
+  description: >-
+    Run queries against data ingested into Devo. Supports synchronous JSON/CSV/TSV
+    responses and asynchronous job-based delivery to repositories (HDFS, Amazon S3,
+    Kafka). Job requests start, stop, check status of, and delete running queries.
+  humanURL: https://docs.devo.com/space/latest/95128275/Query+API
+  baseURL: https://apiv2-us.devo.com
+  properties:
+  - type: Documentation
+    url: https://docs.devo.com/space/latest/95128301/Running+queries+with+the+Query+API
+  - type: Authentication
+    url: authentication/devo-authentication.yml
+- name: Devo Alerts API
+  description: >-
+    Create, read, update, delete, and manage Devo alert definitions and alert
+    instances programmatically.
+  humanURL: https://docs.devo.com/space/latest/95128644
+  baseURL: https://api-us.devo.com/alerts
+- name: Devo Activeboards API
+  description: >-
+    Programmatic management of Devo Activeboards (dashboards) — list, retrieve,
+    and administer board definitions.
+  humanURL: https://docs.devo.com/space/latest/95128251/API+reference
+  baseURL: https://api-us.devo.com
+- name: Devo Lookups API
+  description: >-
+    Manage lookup tables used to enrich queries and correlate data within the
+    Devo platform.
+  humanURL: https://docs.devo.com/space/latest/95128251/API+reference
+  baseURL: https://api-us.devo.com
+- name: Devo Provisioning API
+  description: >-
+    Administrative provisioning of Devo domains, users, and platform resources.
+  humanURL: https://docs.devo.com/space/latest/95128251/API+reference
+  baseURL: https://api-us.devo.com
+- name: Devo Relay API
+  description: >-
+    Manage Devo Relay configuration for secure data forwarding into the platform.
+  humanURL: https://docs.devo.com/space/latest/95128251/API+reference
+  baseURL: https://api-us.devo.com
 common:
 - type: Website
   url: https://www.devo.com/
+- type: DeveloperPortal
+  url: https://docs.devo.com/
+- type: Documentation
+  url: https://docs.devo.com/space/latest/95128251/API+reference
+- type: APIReference
+  url: https://docs.devo.com/space/latest/95128251/API+reference
+- type: GettingStarted
+  url: https://docs.devo.com/space/latest/95128301/Running+queries+with+the+Query+API
+- type: Authentication
+  url: authentication/devo-authentication.yml
+- type: GitHubOrganization
+  url: https://github.com/DevoInc
+- type: Blog
+  url: https://www.devo.com/blog/
+- type: Support
+  url: https://support.devo.com/
+- type: SignUp
+  url: https://www.devo.com/demo/
+- type: Login
+  url: https://www.devo.com/login/
+- type: TermsOfService
+  url: https://www.devo.com/legal-hub/devo-terms-of-service/
+- type: PrivacyPolicy
+  url: https://www.devo.com/privacy/
+- type: TrustCenter
+  url: security/devo-trust-center.yml
+- type: Compliance
+  url: https://www.devo.com/trust-center/
+- type: Packages
+  url: packages/devo-packages.yml
+- type: SDKs
+  url: packages/devo-packages.yml
+- type: CLI
+  url: cli/devo-cli.yml
+- type: Components
+  url: components/devo-components.yml
+- type: WellKnown
+  url: well-known/devo-well-known.yml
+- type: Conventions
+  url: conventions/devo-conventions.yml
+- type: Conformance
+  url: conformance/devo-conformance.yml
+- type: Lifecycle
+  url: lifecycle/devo-lifecycle.yml
+- type: DomainSecurity
+  url: security/devo-domain-security.yml
+- type: LLMsTxt
+  url: llms/devo-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

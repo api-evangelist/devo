@@ -1,0 +1,34 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  Devo Trust Center (https://www.devo.com/trust-center/), REST API authorization
+  docs, and the first-party python-sdk
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    SOC 2 Type II examination completed for the Devo Data Analytics Platform
+    (security, availability, confidentiality). Published at devo.com/trust-center.
+- id: hmac-request-signing
+  conforms: true
+  evidence: >-
+    REST API supports HMAC-SHA256 request signing (x-logtrust-apikey /
+    -timestamp / -sign headers) per python-sdk client.
+- id: http-bearer-token
+  conforms: true
+  evidence: Standalone Bearer token authentication supported (Authorization header).
+- id: mutual-tls
+  conforms: true
+  evidence: >-
+    Event ingestion uses mutual-TLS X.509 domain certificates over the secure
+    sending endpoints.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    No OAuth2 authorization flows are documented; the REST API uses API
+    key/secret HMAC signing and standalone Bearer tokens rather than OAuth2.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: >-
+    Error responses use a Devo JSON envelope (status / object / msg fields),
+    not the application/problem+json media type.

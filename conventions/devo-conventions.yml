@@ -1,0 +1,58 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.devo.com/space/latest/95128275/Query+API and the first-party
+  python-sdk (https://github.com/DevoInc/python-sdk)
+authentication:
+  styles: [hmac-signed-apikey, standalone-bearer-token]
+  detail: See authentication/devo-authentication.yml
+  cross_ref: authentication/devo-authentication.yml
+regional_endpoints:
+  note: >-
+    The API host is chosen by the Devo domain's region. Requests must target the
+    correct regional endpoint.
+  hosts:
+  - {region: US, query_api: https://apiv2-us.devo.com, alerts_api: https://api-us.devo.com/alerts}
+  - {region: EU, query_api: https://apiv2-eu.devo.com, alerts_api: https://api-eu.devo.com/alerts}
+versioning:
+  scheme: uri-path
+  detail: >-
+    The current REST query surface is API v2, served from the apiv2-* regional
+    hosts under /search/*. Documentation is versioned per platform release
+    (e.g. v7.x, v8.x).
+  cross_ref: lifecycle/devo-lifecycle.yml
+async_jobs:
+  style: query-job
+  detail: >-
+    Long-running or large queries can be issued asynchronously as jobs. Job
+    requests start, stop, check the status of, and delete queries; results can
+    be redirected to HDFS, Amazon S3, or Kafka repositories rather than returned
+    inline.
+  endpoints_base: /search
+request_tracing:
+  note: >-
+    Query responses include a unique server-assigned request identifier (msg /
+    request id) surfaced by the SDK for correlation and error reporting.
+response_formats:
+  query_modes: [json, json/simple, json/compact, msgpack, csv, tsv, xls]
+  detail: >-
+    The Query API returns a standard synchronous response in the requested
+    format, or streams keep-alive tokens for long-running queries.
+time_range:
+  params: [from, to]
+  detail: >-
+    Queries are bounded by a from/to time window; the SDK defaults to a
+    relative window (from '1h').
+error_envelope:
+  format: devo-json-envelope
+  fields: [status, object, msg]
+  detail: >-
+    Error responses carry a JSON envelope with a numeric status code, an object
+    payload, and a msg field (with a server-assigned request identifier and
+    timestamp). Not RFC 9457 problem+json.
+  cross_ref: conformance/devo-conformance.yml
+idempotency:
+  supported: false
+  note: >-
+    The Query API is read-oriented and does not document an idempotency-key
+    header; no idempotency contract is published.

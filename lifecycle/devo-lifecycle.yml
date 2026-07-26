@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://docs.devo.com/space/latest/95128251/API+reference and Devo platform
+  release documentation
+versioning:
+  scheme: uri-path
+  current: v2
+  detail: >-
+    The REST query surface is API v2, served from the apiv2-* regional hosts.
+    Platform documentation is versioned per release train (v7.x, v8.x, latest).
+  docs: https://docs.devo.com/space/latest/95128275/Query+API
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal API deprecation policy or RFC 8594 Sunset/Deprecation header
+    support was found in public documentation.
+sla:
+  url: null
+  note: SLA terms are covered under Devo's commercial agreements, not published publicly.
+status_page:
+  url: null
+  note: >-
+    No public status page was found (status.devo.com does not resolve to a
+    public status endpoint).
+deprecated_operations: []

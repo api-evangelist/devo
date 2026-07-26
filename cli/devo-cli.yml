@@ -1,0 +1,24 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  DevoInc GitHub organization (https://github.com/DevoInc) — applications-builder-cli
+  and devo-relay repositories
+clis:
+- name: Devo Application Builder CLI
+  repo: https://github.com/DevoInc/applications-builder-cli
+  language: javascript
+  install: npm install -g @devoinc/applications-builder-cli
+  description: >-
+    Scaffold, develop, and build Devo applications and dashboards on the Devo
+    Applications Builder framework.
+  official: true
+- name: Devo NG-Relay CLI
+  repo: https://github.com/DevoInc/devo-relay
+  description: >-
+    Command-line tooling for running and managing the Devo NG-Relay (secure data
+    forwarding), distributed alongside the relay via docker compose.
+  official: true
+note: >-
+  Devo ships developer-tooling CLIs (app builder, relay) rather than a single
+  monolithic platform CLI; core query/ingest automation is done via the language
+  SDKs in packages/devo-packages.yml.

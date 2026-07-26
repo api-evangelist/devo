@@ -1,0 +1,14 @@
+{
+  "repo": "devo",
+  "feeds": [
+    {
+      "source": "https://github.com/DevoInc",
+      "feed_url": "https://github.com/DevoInc",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

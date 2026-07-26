@@ -1,0 +1,91 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  npm, PyPI, RubyGems registries and the DevoInc GitHub organization
+  (https://github.com/DevoInc)
+packages:
+- language: python
+  registry: pypi
+  name: devo-sdk
+  version: 7.0.1
+  url: https://pypi.org/project/devo-sdk/
+  repo: https://github.com/DevoInc/python-sdk
+  install: pip install devo-sdk
+  description: >-
+    Official Devo Python SDK. Send events and files to Devo, run queries against
+    the Query API, and manage deferred tasks. Python 3.10+.
+  official: true
+- language: python
+  registry: pypi
+  name: devo-utils
+  version: 3.0.7
+  url: https://pypi.org/project/devo-utils/
+  repo: https://github.com/DevoInc/python-utils
+  install: pip install devo-utils
+  description: Extra functionality layered on devo-sdk for clients and resellers.
+  official: true
+- language: python
+  registry: pypi
+  name: devo-mlmodelmanager
+  version: 1.6.1
+  url: https://pypi.org/project/devo-mlmodelmanager/
+  repo: https://github.com/DevoInc/python-mlmodelmanager-client
+  install: pip install devo-mlmodelmanager
+  description: Client for the Devo ML Model Manager.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@devo/nodejs-sdk"
+  version: 2.3.4
+  url: https://www.npmjs.com/package/@devo/nodejs-sdk
+  repo: https://github.com/DevoInc/nodejs-sdk
+  install: npm install @devo/nodejs-sdk
+  description: >-
+    Official Devo Node.js SDK. Send events to Devo, run queries, and manage
+    pending tasks.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@devo/browser-sdk"
+  version: 1.3.3
+  url: https://www.npmjs.com/package/@devo/browser-sdk
+  repo: https://github.com/DevoInc/browser-sdk
+  install: npm install @devo/browser-sdk
+  description: Official Devo browser SDK. Send queries to Devo and manage pending tasks.
+  official: true
+- language: typescript
+  registry: npm
+  name: "@devoinc/alerts-api-client"
+  url: https://www.npmjs.com/package/@devoinc/alerts-api-client
+  repo: https://github.com/DevoInc/alerts-api-client
+  install: npm install --save @devoinc/alerts-api-client
+  description: >-
+    TypeScript client for the Devo Alerts API (base https://api-us.devo.com/alerts).
+  official: true
+- language: javascript
+  registry: npm
+  name: "@devoinc/applications-builder"
+  version: 2.0.3
+  url: https://www.npmjs.com/package/@devoinc/applications-builder
+  repo: https://github.com/DevoInc/applications-builder
+  install: npm install @devoinc/applications-builder
+  description: >-
+    JavaScript Applications Builder framework for constructing Devo apps and
+    dashboards.
+  official: true
+- language: ruby
+  registry: rubygems
+  name: fluent-plugin-devo
+  version: 1.2.0
+  url: https://rubygems.org/gems/fluent-plugin-devo
+  repo: https://github.com/DevoInc/fluent-plugin-devo
+  install: gem install fluent-plugin-devo
+  description: Fluentd output plugin to send events to Devo with certificates.
+  official: true
+- language: typescript
+  registry: github
+  name: grafana-devo-datasource
+  url: https://github.com/DevoInc/grafana-devo-datasource
+  repo: https://github.com/DevoInc/grafana-devo-datasource
+  description: Grafana datasource plugin to connect Grafana to Devo as a data source.
+  official: true

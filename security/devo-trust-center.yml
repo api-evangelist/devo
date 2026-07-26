@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://www.devo.com/trust-center/ and Devo newsroom
+  (https://www.devo.com/company/newsroom/devo-technology-successfully-completes-type-ii-soc-2-examination/)
+url: https://www.devo.com/trust-center/
+description: >-
+  The Devo Trust Center publishes the company's privacy, security, and compliance
+  posture, its latest SOC 2 reports, and legal documents and policies for the
+  Devo Data Analytics Platform.
+certifications:
+- name: SOC 2 Type II
+  scope: security, availability, confidentiality
+  status: completed
+  evidence: >-
+    Devo Technology successfully completed a SOC 2 Type II examination for the
+    Devo Data Analytics Platform, reporting on the security, availability, and
+    confidentiality trust services criteria.
+  source: https://www.devo.com/company/newsroom/devo-technology-successfully-completes-type-ii-soc-2-examination/
+privacy:
+  statement_url: https://www.devo.com/privacy/
+  note: >-
+    Devo maintains a privacy program designed to respond to the changing global
+    landscape of privacy laws and regulations; the Privacy Statement is
+    surfaced through the Trust Center.
+evidence:
+- source: https://www.devo.com/trust-center/
+  keywords: [trust center, soc 2, privacy, security, compliance]

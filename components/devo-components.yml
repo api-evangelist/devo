@@ -1,0 +1,51 @@
+generated: '2026-07-18'
+method: searched
+source: DevoInc GitHub organization (https://github.com/DevoInc)
+families:
+- family: Genesys Design System
+  description: >-
+    Devo's design system and React UI component ecosystem used across Devo
+    products.
+  components:
+  - name: genesys-ui
+    repo: https://github.com/DevoInc/genesys-ui
+    description: Genesys UI React components library (monorepo).
+    type: react-components
+  - name: genesys-design-system
+    repo: https://github.com/DevoInc/genesys-design-system
+    description: The Genesys Design System documentation and specification.
+    type: design-system
+  - name: genesys-icons
+    repo: https://github.com/DevoInc/genesys-icons
+    description: Icon library used by Devo products.
+    type: icon-library
+  - name: genesys-tokens
+    repo: https://github.com/DevoInc/genesys-tokens
+    description: Design-token generation packages.
+    type: design-tokens
+  - name: genesys-ui-form-builder
+    repo: https://github.com/DevoInc/genesys-ui-form-builder
+    description: Descriptive-model form builder for the Genesys UI ecosystem.
+    type: react-components
+- family: Applications Builder
+  description: >-
+    Framework and widgets for embedding Devo-powered apps, dashboards, and
+    visualizations.
+  components:
+  - name: applications-builder
+    repo: https://github.com/DevoInc/applications-builder
+    npm: "@devoinc/applications-builder"
+    description: JavaScript Applications Builder framework for Devo apps.
+    type: app-framework
+  - name: App-Developer-Kit
+    repo: https://github.com/DevoInc/App-Developer-Kit
+    description: NPM package to build JavaScript web-browser applications on Devo.
+    type: sdk-kit
+  - name: App-Widgets
+    repo: https://github.com/DevoInc/App-Widgets
+    description: Widgets for apps built with the App Developer Kit.
+    type: widgets
+  - name: grid-layout
+    repo: https://github.com/DevoInc/grid-layout
+    description: Draggable, resizable, responsive React grid layout.
+    type: react-components
