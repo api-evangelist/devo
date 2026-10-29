@@ -64,6 +64,100 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Devo is a company surfaced as a portfolio company of bessemer-venture-partners, insight-partners and added to the API Evangelist network as a stub for enrichment. Sector: cybersecurity. This profile is a lead awaiting the enrichment pipeline.
+Devo is a cloud-native security data platform delivering unified SIEM, security analytics, and threat detection at petabyte scale, powered by its HyperStream data engine for real-time ingestion and analytics. Devo exposes a public REST API surface for programmatic access to the platform: a Query API for running synchronous and asynchronous (job) queries against ingested data, an Alerts API for managing alert definitions and alert instances, plus Activeboards, Lookups, Provisioning, and Relay APIs. Authentication uses domain API key and secret credentials (HMAC-SHA256 request signing via x-logtrust-apikey / -timestamp / -sign headers) or standalone Bearer tokens. First-party SDKs are published for Python, Node.js, and the browser, alongside a Grafana datasource, a Fluentd plugin, an ML Model Manager client, and a JavaScript application-builder framework. Regional API endpoints are provided for the US (apiv2-us.devo.com) and EU (apiv2-eu.devo.com).
 
-Backed by: bessemer-venture-partners, insight-partners — https://www.devo.com/
+**Areas:** Company · Cybersecurity · SIEM · Security · Security Data Platform · Threat Detection · Log Management · Analytics · Observability · Query API
+
+## Devo on APIs.io
+
+Everything profiled for Devo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/devo/](https://apis.io/providers/devo/)** — or go straight to one of the APIs or properties below.
+
+### APIs (6)
+
+- [Devo Query API](https://apis.io/apis/devo/devo-query-api/) — Run queries against data ingested into Devo. Supports synchronous JSON/CSV/TSV responses and asynchronous job-based delivery to repositories (HDFS, Amazon…
+- [Devo Alerts API](https://apis.io/apis/devo/devo-alerts-api/) — Create, read, update, delete, and manage Devo alert definitions and alert instances programmatically.
+- [Devo Activeboards API](https://apis.io/apis/devo/devo-activeboards-api/) — Programmatic management of Devo Activeboards (dashboards) — list, retrieve, and administer board definitions.
+- [Devo Lookups API](https://apis.io/apis/devo/devo-lookups-api/) — Manage lookup tables used to enrich queries and correlate data within the Devo platform.
+- [Devo Provisioning API](https://apis.io/apis/devo/devo-provisioning-api/) — Administrative provisioning of Devo domains, users, and platform resources.
+- [Devo Relay API](https://apis.io/apis/devo/devo-relay-api/) — Manage Devo Relay configuration for secure data forwarding into the platform.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Devo Authentication](https://apis.io/security/devo/devo-authentication/)
+- [Devo Domain Security](https://apis.io/security/devo/devo-domain-security/)
+- [Devo Trust Center](https://apis.io/security/devo/devo-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.devo.com/)
+- [Documentation](https://docs.devo.com/space/latest/95128251/API+reference)
+- [Getting started](https://docs.devo.com/space/latest/95128301/Running+queries+with+the+Query+API)
+- [API reference](https://docs.devo.com/space/latest/95128251/API+reference)
+- [Sign up](https://www.devo.com/demo/)
+- [Support](https://support.devo.com/)
+- [Blog](https://www.devo.com/blog/)
+- [Compliance](https://www.devo.com/trust-center/)
+- [Terms of service](https://www.devo.com/legal-hub/devo-terms-of-service/)
+- [Privacy policy](https://www.devo.com/privacy/)
+- [GitHub](https://github.com/DevoInc)
+
+## API Evangelist rating
+
+**Kin Score 36.3** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 69.0 |
+| Access clarity | 50.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/devo/](https://apis.io/providers/devo/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Devo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/devo/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
